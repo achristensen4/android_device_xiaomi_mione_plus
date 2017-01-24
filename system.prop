@@ -4,7 +4,7 @@
 
 # Default network type
 # 7 => Global
-ro.telephony.default_network=7
+ro.telephony.default_network=4
 
 # Ril
 ro.ril.oem.nosim.ecclist=911,112,120,122,110,119
@@ -33,15 +33,15 @@ debug.enabletr=true
 ro.sf.compbypass.enable=1
 ro.sf.lcd_density=240
 dev.pm.dyn_samplingrate=1
-ro.hdmi.enable=false
-ro.bq.gpu_to_cpu_unsupported=1
+ro.hdmi.enable=true
+ro.bq.gpu_to_cpu_unsupported=0
 debug.egl.recordable.rgba8888=1
 
 #system props for the MM modules
 media.stagefright.enable-record=true
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
-media.stagefright.enable-fma2dp=false
+media.stagefright.enable-fma2dp=true
 media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-scan=true
@@ -73,32 +73,10 @@ ro.qualcomm.cabl=0
 #
 # System prop for sending transmit power request to RIL during WiFi hotspot on/off
 #
-#ro.ril.transmitpower=true
+ro.ril.transmitpower=true
 
 # system property for thermald
 persist.thermal.monitor=true
 
 # Misc.
 persist.timed.enable=true
-
-#
-# Haptic
-#
-ro.haptic.vibrate_ex.enabled=1
-persist.sys.haptic.long.weak=0,0,1,30,20,0,21
-persist.sys.haptic.long.normal=0,0,1,80,20,0,21
-persist.sys.haptic.long.strong=0,0,1,120,30,0,21
-persist.sys.haptic.down.weak=0,30,5,-5,5
-persist.sys.haptic.down.normal=0,80,5,-5,5
-persist.sys.haptic.down.strong=0,120,10,-5,5
-persist.sys.haptic.up.weak=0,30,5,-5,5
-persist.sys.haptic.up.normal=0,80,5,-5,5
-persist.sys.haptic.up.strong=0,120,10,-5,5
-persist.sys.haptic.tap.weak=0,30,5,-5,5
-persist.sys.haptic.tap.normal=0,80,10,-5,5
-persist.sys.haptic.tap.strong=0,120,5,-5,5
-
-# Improves UI responsiveness when copying large amount of data
-# http://review.cyanogenmod.org/8875
-ro.vold.umsdirtyratio=50
-
